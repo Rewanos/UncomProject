@@ -1,0 +1,128 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.welcome
+		h1
+			font-size: 50px
+	.s-direct
+		p 
+			font-size: 15px
+	.item-vertical-2
+		h4 
+			font-size: 15px
+		p 
+			font-size: 14px
+	.science
+		font-size: 13px
+	.train-home
+		grid-template-columns: repeat(3,2fr)
+	.train-item
+		&-content
+			p 
+				font-size: 12px
+		&:nth-child(3)
+			grid-column: 2/3
+			grid-row: 2
+		&:nth-child(4)
+			grid-column: 1/2
+			grid-row: 2
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.welcome
+		h1
+			font-size: 45px
+	.s-direct
+		h2 
+			font-size: 25px
+		h3 
+			font-size: 20px
+		p 
+			font-size: 14px
+	.item-vertical-2
+		h4 
+			font-size: 13px
+		p 
+			font-size: 12px
+	.science
+		font-size: 10px
+
+	.train-home
+		grid-template-columns: repeat(2,1fr)
+	.train-item
+		&-content
+			p 
+				font-size: 12px
+		
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.welcome
+		h1
+			font-size: 40px
+
+	.train-home
+		grid-template-columns: 1fr
+	.train-item
+		h4 
+			font-size: 15px
+		&-content
+			p 
+				font-size: 14px
+		&:nth-child(3)
+			grid-column: 1
+		&:nth-child(4)
+			grid-column: 1
+			
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.welcome
+		h1
+			font-size: 35px
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	.welcome
+		h1
+			font-size: 30px
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

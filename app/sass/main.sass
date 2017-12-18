@@ -1,0 +1,458 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+h1, h2, h3, h4, h5, h6
+	line-height: 1.4
+	
+
+.centered
+	text-align: center
+
+a
+	color: #f85c7
+	a:hover a:active
+		color: #259196
+		text-decoration: none
+		outline: 0
+		transition: 0.5 ease
+
+.hamburger
+	right: 1%
+	position: absolute
+	top: 35px
+	.hamburger-box
+		
+	.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+		color: #fff
+		width: 37px
+		height: 2px
+		background-color: #FFF
+
+
+//Kafedra section
+
+.header-img
+	background-image: url("../img/oilfield.jpg")
+	min-height: 100vh
+	background-size: cover
+	background-position: cover
+	position: relative
+	z-index: -100
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: $dark
+		opacity: .85
+
+.button-center
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+	margin-bottom: 0
+	margin-top: 40px
+
+.button
+	position: relative
+	text-align: center
+	margin: 0.5%
+	margin-top: 7px
+	margin-bottom: 30px
+	display: inline-block
+	border: none 
+	background-color: $accent
+	color: #fff
+	font-size: 14px
+	letter-spacing: 1px
+	padding: 11px 25px
+	border-radius: 5px
+	box-shadow: 0 4px 0 darken($accent, 6%)
+	transition: all .25s ease
+	&:hover, &:focus 
+		color: #fff 
+		text-decoration: none 
+	&:hover
+		background-color: darken($accent, 6%)
+	&:active
+		background-color: darken($accent, 6%)
+		transform: translateY(4px)
+
+.button-gray
+	margin: 
+
+.header-flex
+	
+	height: 100%
+	position: relative
+	top: 90px
+	color: #fff
+.flex-center
+	margin: auto
+
+.header-composition
+	text-align: center
+	position: relative
+	p 
+		margin-top: 40px
+
+.welcome
+	p
+		font-size: 14px
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		white-space: nowrap
+		margin: 0
+		margin-bottom: -10px
+		span 
+			margin: 0 10px
+
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 100%
+			position: relative
+			background-color: #FFF
+			display: inline-block
+	
+	h1 
+		font-family: $default-thin
+		text-transform: uppercase
+		font-size: 60px
+		margin: 0
+		line-height: 1.6
+		border-bottom: 1px solid #fff 
+	strong
+		display: block
+		text-transform: uppercase
+		font-size: 17px
+		margin-top: 25px
+		.fa 
+			margin-right: 10px
+			font-size: 12px
+			&:last-child
+				margin-left: 10px
+				margin-right: inherit
+				
+
+
+
+
+//Section 2
+.s-wide
+	background-image: url("../../app/img/turbine2.jpg")
+	min-height: 95vh
+	background-size: cover
+	background-position: center
+	position: relative
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #b5bfc7
+		opacity: .85
+
+
+
+.s-direct
+	h2 
+		font-size: 27px
+		text-align: center
+		margin-top: 20px
+		color: #333
+		z-index: 1
+		position: relative
+	ul 
+		li 
+			list-style-type: none
+			text-align: left
+
+.item-vertical
+	svg, img
+		width: 74px
+		height: auto
+	path 
+		fill:#555
+		+mt(.5s)
+	&:hover
+		.button 
+			background-color: lighten($accent, 6%)
+			box-shadow: 0px 4px 0px darken($accent, 6%)
+			color: #fff
+			&:active
+				background-color: darken($accent, 6%)
+				color: $accent
+			&:focus 
+				background-color: $accent
+				border: $accent 1px solid
+				box-shadow: 0px 4px 0px darken($accent, 6%)
+				color: #fff
+		path
+			fill:$accent!important
+		h3
+			&::before 
+				background-color: $accent
+				width: 30%
+				margin-left: -15%
+	h3 
+		font-size: 20px
+		margin-top: 30px
+		padding-bottom: 15px
+		position: relative
+		&::before 
+			content: ''
+			position: absolute
+			bottom: 0
+			height: 1px
+			width: 15%
+			left: 50%
+			margin-left: -7.5%
+			background-color: #d0d0d0 
+			+mt(.5s)
+
+	p 
+		font-size: 15px
+		color: #000
+		padding: 0 10px
+		margin-top: 20px
+		margin-bottom: 25px
+		height: 88px
+
+	margin-top: 80px
+	text-align: center
+
+// Section 3 Staff
+
+.staff
+	color: #fff
+	h2
+		text-align: center
+
+
+.rounded-img
+	border-radius: 10em
+	border: $accent 5px solid
+	overflow: hidden
+	width: 110px
+	height: 110px
+	text-align: center
+	margin: auto
+	+mt(.5s)
+
+.drank
+	max-width: 100%
+
+.item-vertical-2
+	margin:
+		top: 40px
+	text-align: center
+	h4
+		font-size: 16px
+		font-family: $default-bld
+		margin-top: 25px
+	p 
+		font-size: 14px
+		letter-spacing: 1px
+		+mt(.5s)
+	&:hover
+		.rounded-img
+			transform: scale(1.1)
+		p 
+			color: $accent
+			
+
+.science
+	margin-top: 15px
+	font-weight: bold
+	font-size: 14px
+
+.swiper-container 
+		width: 100%
+		height: 100%
+		
+		h2 
+			z-index: 100
+
+.parallax-bg 
+	position: absolute
+	left: 0
+	top: 0
+	width: 170%
+	height: 100%
+	background-size: cover
+	background-position: left
+	z-index: -9999
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: #293a43
+		opacity: .82 
+
+//Section 4 Training
+
+.train-item-img
+	
+
+.grid 
+	display: grid
+
+.section-train 
+	background-color: $light
+	h2 
+		margin: 
+			top: 20px
+			bottom: 30px
+		text-align: center
+	
+.train-home
+	grid-gap: $gutter
+	grid-template-columns: repeat(4,1fr)
+
+.train-item
+	background-color: lighten($light, 3%)
+	text-decoration: none
+	color: #333
+	grid-template-rows: 1fr 1fr
+	transition: background-color .25s ease
+	overflow: hidden
+	color: #333
+	&:nth-child(3)
+		grid-column: 3/5
+	&:nth-child(4)
+		grid-column: 1/3
+	&:hover
+		background-color: darken($light, 6%)
+		text-decoration: none
+		color: #333
+		h4 
+			color: #293a43
+		.train-item-img
+			transform: scale(1.05) translateY(-6.5px)
+	&-img 
+		height: 270px
+		background-size: cover
+		background-position: center
+		transition: transform .25s ease
+		
+	&-content
+		padding: 25px
+		text-align: center
+		align-content: center
+		h4 
+			font-family: $default-bld
+			font-size: 17px
+			color: #666
+			line-height: 1.3
+			margin: 0
+			transition: color .25s ease
+		p 
+			margin:
+				top: 20px
+				bottom: 0
+
+//Section Partners
+.slide-logo
+	background-image: url("../img/Hydro32.png")
+	background-size: cover
+	background-position: 0 -100px
+	position: relative
+	&::before 
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-color: $light
+		opacity: .95
+
+.slide-hover
+	transition: all .25s ease
+	&:hover
+			transform: scale(1.1)
+			color: $accent
+
+.logo-img
+	width: 150px
+	height: 150px
+	background-size: cover
+	background-position: center
+	margin: auto
+	display: flex;
+	align-items: center;
+	align-content: center; 
+	justify-content: center; 
+	overflow: auto;
+	
+.hydro 
+	width: 100%
+
+.logo-content
+	p 
+		text-align: center
+		margin-top: 15px
+		
+		
+
+@import "media" // Всегда в конце
